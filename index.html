@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="icon" type="image/png" href="./images/logo.png">
+</head>
+<body>
+    <div id="sidebar">
+        <div id="buttons">
+            <button id="collapse">
+                <div id="hamburger">☰</div>
+            </button>
+            <button id="theme-btn">
+                <div id="theme-div">
+                    <div id="circle"></div>
+                </div>
+            </button>
+        </div>
+        <div id="sidebar-links">
+            <div class="sidebar-div">
+                <a href="#about" id="about-info">About</a>
+                <a href="#about" id="about-info-icon" class="hide">
+                    <img src="./images/about.png">
+                </a>
+            </div>
+            <div class="sidebar-div">
+                <a href="#form-section" id="form-info">Sign Up!</a>
+                <a href="#form-section" id="form-info-icon" class="hide">
+                    <img src="./images/form.png">
+                </a>
+            </div>
+            <div class="sidebar-div">
+                <a href="./README.md" target="_blank" id="attribution-info">Attributions</a>
+                <a href="./README.md" target="_blank" id="attribution-info-icon" class="hide">
+                    <img src="./images/attribution.png">
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="about">
+            <div id="heading">Jurassic Botanics</div>
+            <div id="tagline">
+                Bringing Prehistoric Plants to Your Modern Doorstep!
+            </div>
+            <div id="gif">
+                <img src="./images/about-gif.gif" src="dinosaurs gif" id="dino-gif">
+            </div>
+            <div id="desc">
+                Explore rare, resilient, and delightfully prehistoric plant species, delivered straight to your home. <br>Whether you're a casual grower or a fossil fern fanatic, we've got something wild for your windowsill!
+            </div>
+        </div>
+        <div id="form-section">
+            <form action="null" method="post">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <button type="reset">Reset Form?</button>
+                    <label for="first-name" class="required">First Name: 
+                        <input type="text" id="first-name" name="first-name" required minlength="1" maxlength="50" placeholder="Dennis">
+                    </label>
+                    <label for="last-name">Last Name:
+                        <input type="text" id="last-name" name="last-name" minlength="1" maxlength="50" placeholder="Nedry">
+                    </label>
+                    <label for="age">Age: 
+                        <input type="number" id="age" name="age" min="6" max="100" placeholder="40">
+                    </label>
+                    <label for="email" class="required">Email: 
+                        <input type="email" id="email" name="email" required  placeholder="dennisnedry@villains.co" >
+                    </label>
+                    <label for="password" class="required">Password:
+                        <input type="password" name="password" id="password" required>
+                    </label>
+                </fieldset>
+
+
+                <fieldset>
+                    <legend>Additional Information</legend>
+
+                    <label for="source">How did you hear about us?</label>
+                    <select name="source">
+                        <option value=""></option>
+                        <option value="socials">Social Media</option>
+                        <option value="friends">Friends</option>
+                        <option value="newspaper">Newspaper</option>
+                        <option value="google">Google</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="fav-plant">What is your favorite plant type?</label>
+                    <div class="checkboxes">
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="fav-plant" id="baby-dino" value="Baby Dinosaur Plant">
+                            <label for="baby-dino">Baby Dinosaur Plant</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="fav-plant" id="adult-dino" value="Fully-grown Dinosaur Plant">
+                            <label for="adult-dino">Fully-grown Dinosaur Plant</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="fav-plant" id="rare-fossil" value="Rare Fossil Fern">
+                            <label for="rare-fossil">Rare Fossil Fern</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="fav-plant" id="jurassic-moss" value="Jurassic Moss">
+                            <label for="jurassic-moss">Jurassic Moss</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="fav-plant" id="prehistoric-succ" value="Prehistoric Succulent">
+                            <label for="prehistoric-succ">Prehistoric Succulent</label>
+                        </div>
+                    </div>
+
+                    <label for="delivery" class="required">Please choose your preferred delivery schedule: </label>
+                    <div class="checkboxes">
+                        <div class="checkbox-group">
+                            <input type="radio" name="delivery-sched" id="asap" value="asap">
+                            <label for="asap">ASAP (1–2 days)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="radio" name="delivery-sched" id="standard" value="standard" checked>
+                            <label for="standard">Standard (3–5 days)</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="radio" name="delivery-sched" id="scheduled" value="scheduled">
+                            <label for="scheduled">Scheduled (Pick a date)</label>
+                            <input type="date" id="date">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Feedback and Suggestions</legend>
+                    <textarea rows="5" cols="20" placeholder="Open a theme park and invite me...(I won't steal eggs this time)"></textarea>
+                </fieldset>
+
+                <button type="submit">
+                    Sign Up!
+                    <img class="button-img" src="./images/logo.png" alt="dino-logo">
+                </button>
+                <p class="text">Already have an account? <a href="">Login</a></p>
+            </form>
+
+        </div>
+    </div>
+</body>
+</html>
